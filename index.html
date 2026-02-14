@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francescaaaaaaaaa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <!-- HEARTS OVERLAY (only shown on pages 1 & 2) -->
+      <div id="hearts" class="hearts" aria-hidden="true"></div>
+
+      <!-- PAGE 1 -->
+      <section class="page page1" id="page-1" aria-label="Page 1">
+        <button class="card" id="openCard" type="button" aria-label="Open card">
+          <div class="card-text">
+            <div>For,</div>
+            <div class="card-name">Francesca Zanin</div>
+          </div>
+        </button>
+      </section>
+
+      <!-- PAGE 2 -->
+      <section class="page page2 hidden" id="page-2" aria-label="Page 2">
+        <div class="page-inner page-inner--center">
+          <div class="scroll-wrap" role="img" aria-label="Love letter scroll background">
+            <!-- This is the TEXT that sits ON TOP of scroll.png -->
+            <div class="scroll-text">
+              <p>Happy Valentine’s Day Francesca!!!</p>
+              <p>It sucks we’re millions of miles apart right now</p>
+              <p>But we’ll celebrate together soon</p>
+              <p>Gosh, I can’t wait to see YOU</p>
+              <p>I hope Milan is amazing and awesome</p>
+              <p>Be my virtual Valentine???</p>
+              <p class="sig">XOXO</p>
+            </div>
+          </div>
+
+          <!-- bottom-right face + bubble -->
+          <button class="face-cta" id="toPage3" type="button" aria-label="Go to page 3">
+            <div class="bubble-wrap" aria-hidden="true">
+              <div class="bubble">
+                <span class="bubble-text">Hit me</span>
+              </div>
+            </div>
+            <img class="face-img" src="assets/you.png" alt="You" />
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 3 -->
+      <section class="page page3 hidden" id="page-3" aria-label="Page 3">
+        <div class="page-inner page-inner--trip">
+          <h1 class="big-title big-title--light">See you Sooooon</h1>
+
+          <div class="hero-img-wrap">
+            <img class="hero-img" src="assets/trip.png" alt="Trip from USA to Italy" />
+          </div>
+
+          <button class="face-cta" id="toPage4" type="button" aria-label="Go to final page">
+            <div class="bubble-wrap" aria-hidden="true">
+              <div class="bubble">
+                <span class="bubble-text">Hit me again</span>
+              </div>
+            </div>
+            <img class="face-img" src="assets/me.png" alt="Me" />
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 4 -->
+      <section class="page page4 hidden" id="page-4" aria-label="Page 4">
+        <div class="page-inner page-inner--gift">
+          <h1 class="big-title big-title--light">Here’s your actual gift…</h1>
+
+          <div class="hero-img-wrap hero-img-wrap--gift">
+            <img class="hero-img hero-img--gift" src="assets/spa.png" alt="Spa gift" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
