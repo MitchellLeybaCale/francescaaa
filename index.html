@@ -263,21 +263,36 @@
         outline: 2px solid rgba(255,255,255,.25);
       }
 
-      /* ---------- COMIC BUBBLE - SMALLER & MORE CIRCULAR ---------- */
+      /* ---------- COMIC BUBBLE - OUTLINED WITH WHITE TEXT ---------- */
       .bubble{
         width: 110px;
         height: 110px;
-        background: #ffffff;
+        background: transparent;
+        border: 3px solid #ffffff;
         border-radius: 50%;
-        box-shadow: 0 8px 20px rgba(0,0,0,.3);
+        box-shadow: 0 8px 20px rgba(0,0,0,.4);
         display: grid;
         place-items: center;
         padding: 15px;
         position: relative;
       }
 
-      /* Comic speech bubble tail - pointing down to face */
+      /* Comic speech bubble tail - white outline only */
       .bubble::after{
+        content: '';
+        position: absolute;
+        bottom: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 15px solid #ffffff;
+      }
+
+      /* Add inner triangle to create outline effect for tail */
+      .bubble::before{
         content: '';
         position: absolute;
         bottom: -10px;
@@ -285,19 +300,20 @@
         transform: translateX(-50%);
         width: 0;
         height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-top: 12px solid #ffffff;
-        filter: drop-shadow(0 3px 4px rgba(0,0,0,.2));
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 12px solid transparent;
+        z-index: 1;
       }
 
-      /* BLACK TEXT in white bubble */
+      /* WHITE TEXT in outlined bubble */
       .bubble-text{
-        color: #000000;
+        color: #ffffff;
         text-align: center;
         font-size: 16px;
-        line-height: 1.1;
-        text-shadow: none;
+        line-height: 1.2;
+        text-shadow: 0 2px 8px rgba(0,0,0,.6),
+                     0 1px 4px rgba(0,0,0,.5);
         font-weight: 700;
         max-width: 100%;
         overflow-wrap: anywhere;
